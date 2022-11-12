@@ -63,6 +63,7 @@ const deleteLavadora = (req, res) => {
 }
 
 
+
 module.exports = {
     createLavadora,
     getLavadora,

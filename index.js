@@ -6,12 +6,14 @@ require('dotenv').config();
 const app = express();
 const tipolavroutes = require("./routes/tipolavroutes");
 const lavroutes = require("./routes/lavroutes");
+const statushoraroutes = require("./routes/statushoraroutes");
 
 app.use(cors())
 app.use(express.json());
 app.options('*', cors());
 app.use('/api', tipolavroutes);
 app.use('/api', lavroutes);
+app.use('/api', statushoraroutes);
 
 
 app.listen(process.env.PORT, () => {

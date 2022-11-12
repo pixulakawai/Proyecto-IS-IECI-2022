@@ -5,7 +5,7 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
-    lavhoras: {
+    HorasUso: {
         type: Number,
         required: true
     }

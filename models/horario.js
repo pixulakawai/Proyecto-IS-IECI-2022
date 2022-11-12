@@ -9,10 +9,9 @@ const HorarioSchema = new Schema({
         type: String,
         required: true
     },
-    tipo: {
+    lavadora: {
         type: Schema.ObjectId,
         ref: 'Lavadora',
-        required: true
     },
     status: {
         type: Schema.ObjectId,

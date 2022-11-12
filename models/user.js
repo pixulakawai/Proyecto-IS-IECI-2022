@@ -8,6 +8,10 @@ const UserSchema = new Schema({
     HorasUso: {
         type: Number,
         required: true
+    },
+    correo :{
+        type: String,
+        require: true
     }
 })
 

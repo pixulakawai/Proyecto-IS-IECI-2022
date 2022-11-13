@@ -8,6 +8,7 @@ const tipolavroutes = require("./routes/tipolavroutes");
 const lavroutes = require("./routes/lavroutes");
 const statushoraroutes = require("./routes/statushoraroutes");
 const horarioroutes = require("./routes/horarioroutes");
+const userroutes = require("./routes/userroutes");
 
 app.use(cors())
 app.use(express.json());
@@ -16,6 +17,7 @@ app.use('/api', tipolavroutes);
 app.use('/api', lavroutes);
 app.use('/api', statushoraroutes);
 app.use('/api', horarioroutes);
+app.use('/api', userroutes);
 
 
 app.listen(process.env.PORT, () => {

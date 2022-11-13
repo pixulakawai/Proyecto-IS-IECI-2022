@@ -27,7 +27,7 @@ const getLavadora = (req, res) => {
 
 const getSpecificLavadora = (req, res) => {
     const { id } = req.params;
-    Lavadora.findById(id).populate({ path: 'Tipolavadora' }).exec((err, Lavadora) => {
+    Lavadora.findById(id).populate({ path: 'tipo' }).exec((err, Lavadora) => {
         if (err) {
             return res.status(400).send({ message: "Error al obtener la Lavadora" })
         }

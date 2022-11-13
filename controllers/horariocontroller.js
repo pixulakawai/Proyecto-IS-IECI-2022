@@ -29,7 +29,7 @@ const getHorario = (req, res) => {
 
 const getSpecificHorario = (req, res) => {
     const { id } = req.params;
-    Horario.findById(id).populate({ path: 'TipoHorario' }).exec((err, Horario) => {
+    Horario.findById(id).populate({ path: 'lavadora' }).populate({path: 'statuslavadora'}).populate({path: 'user'}).exec((err, Horario) => {
         if (err) {
             return res.status(400).send({ message: "Error al obtener el Horario" })
         }

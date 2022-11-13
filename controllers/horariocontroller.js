@@ -3,12 +3,13 @@ const Horario = require('../models/horario');
 // CRUD Horario
 
 const createHorario = (req, res) => {
-    const { inicio, final, lavadora,status } = req.body;
+    const { inicio, final, lavadora,status,user } = req.body;
     const newHorario = new Horario({
         inicio,
         final,
         lavadora,
-        status
+        status,
+        user
     });
     newHorario.save((err, Horario) => {
         if (err) {

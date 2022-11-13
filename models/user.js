@@ -9,6 +9,10 @@ const UserSchema = new Schema({
         type: Number,
         required: true
     },
+    HorasExtra: {
+        type: Number,
+        required: true
+    },
     correo :{
         type: String,
         require: true

@@ -16,7 +16,11 @@ const HorarioSchema = new Schema({
     status: {
         type: Schema.ObjectId,
         ref: 'StatusHora'
-    }
+    },
+    user: {
+        type: Schema.ObjectId,
+        ref: 'User',
+    },
 })
 
 module.exports = mongoose.model('Horario', HorarioSchema);

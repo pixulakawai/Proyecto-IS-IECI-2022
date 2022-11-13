@@ -1,5 +1,7 @@
 const Tipolavadora = require('../models/tipolavadora');
 
+// CRUD Tipo Lavadora
+
 const createTipolavadora = (req, res) => {
     const {tipo} = req.body;
     const newTipolavadora = new Tipolavadora({

@@ -1,10 +1,12 @@
 const Horario = require('../models/horario');
 
+// CRUD Horario
+
 const createHorario = (req, res) => {
-    const { intervalo, fecha, lavadora,status } = req.body;
+    const { inicio, final, lavadora,status } = req.body;
     const newHorario = new Horario({
-        intervalo,
-        fecha,
+        inicio,
+        final,
         lavadora,
         status
     });
@@ -62,7 +64,7 @@ const deleteHorario = (req, res) => {
         return res.status(200).send(Horario)
     })
 }
-
+// 
 
 
 module.exports = {

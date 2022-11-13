@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const HorarioSchema = new Schema({
-    intervalo: {
-        type: String,
+    inicio: {
+        type: Date,
         required: true
     },
-    fecha: {
-        type: String,
+    final: {
+        type: Date,
         required: true
     },
     lavadora: {

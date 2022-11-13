@@ -1,5 +1,7 @@
 const StatusHora = require('../models/statushora');
 
+// CRUD Status
+
 const createStatusHora = (req, res) => {
     const {status} = req.body;
     const newStatusHora = new StatusHora({
